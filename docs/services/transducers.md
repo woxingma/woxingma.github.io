@@ -58,8 +58,8 @@ Advanced capabilities for complex applications:
 
 - **Linear Arrays** - 1D beam steering and focusing
 - **Phased Arrays** - Electronic beam steering
-- ** 2D Arrays** - Full 3D imaging capability
-- **Sparse Arrays** - Optimized element placement
+- **2D Arrays** - Full 3D imaging capability
+- **Sparse Arrays** - Optimised element placement
 
 ### Specialized Transducers
 
