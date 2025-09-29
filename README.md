@@ -477,4 +477,4 @@ Copyright © 2025 Onyx Ultrasonics Ltd. All rights reserved.
 
 ---
 
-**Built with ❤️ using MKDocs and Material theme**
+**✨ Built by [Fetch Labs](https://github.com/FetchLabsLtd) with 🤖 and 🍵**
