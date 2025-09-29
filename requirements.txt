@@ -1,0 +1,19 @@
+# MkDocs Documentation Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core MkDocs
+mkdocs>=1.5.3
+
+# Material Theme
+mkdocs-material>=9.5.3
+
+# Plugins
+mkdocs-minify-plugin>=0.8.0
+mkdocs-glightbox>=0.4.0
+
+# Markdown Extensions (included with mkdocs-material, but explicit for clarity)
+pymdown-extensions>=10.7
+
+# Optional but recommended
+mkdocs-git-revision-date-localized-plugin>=1.2.4
+mkdocs-awesome-pages-plugin>=2.9.2

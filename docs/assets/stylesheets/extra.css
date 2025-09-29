@@ -1,0 +1,97 @@
+/* Custom CSS for Onyx Ultrasonics Documentation */
+
+/* Enhanced grid cards styling */
+.md-typeset .grid.cards > * {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.md-typeset .grid.cards > *:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Custom color accents */
+:root {
+  --md-primary-fg-color: #546e7a;
+  --md-accent-fg-color: #ff6e40;
+}
+
+/* Enhanced buttons */
+.md-button {
+  transition: all 0.3s ease;
+}
+
+.md-button:hover {
+  transform: scale(1.05);
+}
+
+/* Better spacing for content */
+.md-typeset h1 {
+  margin-top: 0;
+  font-weight: 600;
+}
+
+.md-typeset h2 {
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+/* Logo styling on homepage */
+.md-typeset img[alt*="logo"] {
+  max-width: 300px;
+  margin: 2rem auto;
+  display: block;
+}
+
+/* Logo with alpha channel looks great in both modes - no background needed! */
+
+/* Header logo sizing - make it larger and more visible */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 2.5rem;
+  width: auto;
+}
+
+.md-logo {
+  padding: 0.2rem;
+}
+
+/* Improved admonition styling */
+.md-typeset .admonition {
+  border-left: 4px solid;
+}
+
+/* Enhanced code blocks */
+.md-typeset code {
+  font-size: 0.85em;
+}
+
+/* Better table styling */
+.md-typeset table:not([class]) {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+/* Footer enhancements */
+.md-footer {
+  background-color: var(--md-primary-fg-color);
+}
+
+/* Navigation enhancements */
+.md-tabs {
+  background-color: var(--md-primary-fg-color);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Print styles */
+@media print {
+  .md-header,
+  .md-tabs,
+  .md-footer {
+    display: none;
+  }
+}

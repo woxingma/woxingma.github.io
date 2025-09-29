@@ -1,0 +1,204 @@
+site_name: "Onyx Ultrasonics Ltd"
+site_description: "Onyx Ultrasonics - Engineering consultancy specialising in transducer engineering, sonar and ultrasonics"
+site_author: "Onyx Ultrasonics Ltd"
+site_url: "https://www.onyxultrasonics.co.uk"
+
+copyright: "Copyright &copy; 2025 Onyx Ultrasonics Ltd"
+
+# Theme configuration
+theme:
+  name: material
+  language: en
+  logo: assets/images/bw_onyx_alpha.png
+  favicon: assets/images/bw_onyx_alpha.png
+
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  features:
+    # Navigation
+    - navigation.instant        # Instant loading
+    - navigation.instant.progress  # Progress indicator
+    - navigation.tracking       # URL tracking
+    - navigation.tabs           # Navigation tabs
+    - navigation.tabs.sticky    # Sticky navigation tabs
+    - navigation.sections       # Navigation sections
+    - navigation.expand         # Expand navigation by default
+    - navigation.indexes        # Section index pages
+    - navigation.top            # Back to top button
+    - navigation.footer         # Footer navigation
+
+    # Table of contents
+    - toc.follow                # Follow TOC
+    - toc.integrate             # Integrate TOC
+
+    # Search
+    - search.highlight          # Highlight search results
+    - search.share              # Share search
+    - search.suggest            # Search suggestions
+
+    # Content
+    - content.code.copy         # Copy code button
+    - content.code.annotate     # Code annotations
+    - content.tooltips          # Tooltips
+    - content.tabs.link         # Link content tabs
+
+    # Header
+    - header.autohide           # Auto-hide header
+
+# Navigation structure
+nav:
+  - Home: index.md
+  - About Us: about.md
+  - Services:
+    - services/index.md
+    - Transducer Engineering: services/transducers.md
+    - Sonar Solutions: services/sonar.md
+    - Ultrasonics: services/ultrasonics.md
+  - Applications:
+    - applications/index.md
+    - Maritime: applications/maritime.md
+    - Non-Destructive Testing: applications/ndt.md
+    - Flow Measurement: applications/flow.md
+  - Contact: contact.md
+
+# Markdown extensions
+markdown_extensions:
+  # Standard Python-Markdown extensions
+  - abbr                        # Abbreviations
+  - admonition                  # Admonitions (note, warning, etc.)
+  - attr_list                   # Attribute lists
+  - def_list                    # Definition lists
+  - footnotes                   # Footnotes
+  - md_in_html                  # Markdown in HTML
+  - toc:
+      permalink: true
+      permalink_title: "Permalink to this section"
+      title: "Table of Contents"
+      toc_depth: 3
+
+  # PyMdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret               # Superscript
+  - pymdownx.mark                # Highlighting
+  - pymdownx.tilde               # Subscript
+  - pymdownx.details             # Collapsible details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      auto_title: true
+  - pymdownx.inlinehilite        # Inline code highlighting
+  - pymdownx.keys                # Keyboard keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: woxingma
+      repo: woxingma.github.io
+  - pymdownx.smartsymbols        # Smart symbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: false
+
+# Plugins
+plugins:
+  - search:
+      lang: en
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+        remove_empty_space: true
+      cache_safe: true
+
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      auto_caption: true
+      caption_position: bottom
+
+# Extra configuration
+extra:
+  generator: false  # Remove "Made with Material for MkDocs" footer
+  social:
+    - icon: fontawesome/solid/envelope
+      link: mailto:contact@onyxultrasonics.co.uk
+      name: Email us
+
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/onyx-ultrasonics
+      name: Connect on LinkedIn
+
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Help us improve by contacting us.
+
+# Custom CSS and JavaScript
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra_javascript:
+  - assets/javascripts/extra.js
+
+# Build settings
+strict: true
+site_dir: site
+docs_dir: docs
+use_directory_urls: true
+
+# Validation settings
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
