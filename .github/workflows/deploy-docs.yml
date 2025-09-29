@@ -323,39 +323,14 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          cache: 'pip'
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Configure Git for deployment
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-      - name: Deploy to GitHub Pages (gh-deploy)
-        run: |
-          echo "🚀 Deploying to GitHub Pages..."
-          mkdocs gh-deploy --force --clean --verbose --message "Deploy documentation from commit ${{ github.sha }}"
-          echo "✅ Deployment completed"
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 
       - name: Deployment confirmation
         run: |
           echo "🎉 Documentation deployed successfully!"
-          echo "📖 Site URL: https://www.onyxultrasonics.co.uk"
-          echo "🔗 GitHub Pages: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
+          echo "📖 Site URL: ${{ steps.deployment.outputs.page_url }}"
 
   # ============================================================================
   # JOB 4: Notification and Status Summary
