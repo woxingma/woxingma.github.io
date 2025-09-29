@@ -1,15 +1,16 @@
+---
 name: Deploy MKDocs Documentation
 
-on:
+'on':
   push:
-    branches: [ main, master ]
+    branches: [main, master]
     paths:
       - 'docs/**'
       - 'mkdocs.yml'
       - 'requirements.txt'
       - '.github/workflows/deploy-docs.yml'
   pull_request:
-    branches: [ main, master ]
+    branches: [main, master]
   workflow_dispatch:  # Allow manual trigger
 
 permissions:

@@ -1,5 +1,8 @@
+---
 site_name: "Onyx Ultrasonics Ltd"
-site_description: "Onyx Ultrasonics - Engineering consultancy specialising in transducer engineering, sonar and ultrasonics"
+site_description: >-
+  Onyx Ultrasonics - Engineering consultancy specialising in transducer
+  engineering, sonar and ultrasonics
 site_author: "Onyx Ultrasonics Ltd"
 site_url: "https://www.onyxultrasonics.co.uk"
 
@@ -67,15 +70,15 @@ nav:
   - Home: index.md
   - About Us: about.md
   - Services:
-    - services/index.md
-    - Transducer Engineering: services/transducers.md
-    - Sonar Solutions: services/sonar.md
-    - Ultrasonics: services/ultrasonics.md
+      - services/index.md
+      - Transducer Engineering: services/transducers.md
+      - Sonar Solutions: services/sonar.md
+      - Ultrasonics: services/ultrasonics.md
   - Applications:
-    - applications/index.md
-    - Maritime: applications/maritime.md
-    - Non-Destructive Testing: applications/ndt.md
-    - Flow Measurement: applications/flow.md
+      - applications/index.md
+      - Maritime: applications/maritime.md
+      - Non-Destructive Testing: applications/ndt.md
+      - Flow Measurement: applications/flow.md
   - Contact: contact.md
 
 # Markdown extensions
