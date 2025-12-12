@@ -51,7 +51,7 @@ Our solutions serve multiple industries with cutting-edge technology:
 ## Why Choose Onyx Ultrasonics?
 
 !!! success "Expertise & Innovation"
-    We combine deep technical knowledge with innovative approaches to solve complex engineering challenges.
+    We combine technical knowledge with innovative approaches to solve complex engineering challenges.
 
 !!! info "Custom Solutions"
     Every project is unique. We design and deliver tailored solutions that meet your specific requirements.
